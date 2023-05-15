@@ -2,21 +2,91 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  _border: solid;
 }
 
 body {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 header {
-    border: #000 double medium;
-    position: fixed;
-    top; 0;
-    right: 0;
-    left: 0; 
+  border: #000 double medium;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0999ac;
 }
 
 h1 {
-  text-align: center; 
+  text-align: center;
   padding: 10px;
+}
+
+main {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 15px;
+  padding: 20px;
+}
+
+.question-box {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  _width: auto;
+  _max-width: 300px;
+  height: auto;
+  border: solid thin;
+  border-radius: 5%;
+}
+
+.bookmark {
+  width: 70px;
+  position: absolute;
+  top: 70px;
+  right: 110px;
+}
+.question {
+  text-align: center;
+}
+
+.button {
+  border-radius: 10%;
+  background-color: #fff;
+  border: double;
+  padding: 10px;
+  background-color: #0999ac56;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.one-tag {
+  border: double #000;
+  border-radius: 10%;
+  padding: 5px;
+  font-size: 10px;
 }
