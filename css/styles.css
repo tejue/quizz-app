@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  border: #000 double medium;
+  position: fixed;
+  top; 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+}
