@@ -8,6 +8,7 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #0999ac56;
 }
 
 header {
@@ -20,6 +21,8 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #0999ac;
+  height: 100px;
+  z-index: 1;
 }
 
 h1 {
@@ -28,39 +31,41 @@ h1 {
 }
 
 main {
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 20px;
   padding: 20px;
+  margin-top: 25px;
 }
 
 .question-box {
-  margin: 30px;
+  margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
   width: 100%;
-  _width: auto;
-  _max-width: 300px;
   height: auto;
   border: solid thin;
   border-radius: 5%;
+  position: relative;
+  background-color: #fff;
 }
 
 .bookmark {
   width: 70px;
   position: absolute;
-  top: 70px;
-  right: 110px;
+  top: -20px;
+  right: 40px;
 }
+
 .question {
   text-align: center;
 }
@@ -89,4 +94,5 @@ h2 {
   border-radius: 10%;
   padding: 5px;
   font-size: 10px;
+  background-color: #0000002f;
 }
