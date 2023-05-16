@@ -2,13 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  _border: solid;
 }
 
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #0999ac56;
+  background-color: #de7f1357;
 }
 
 header {
@@ -20,7 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0999ac;
+  background-color: #de7f13;
   height: 100px;
   z-index: 1;
 }
@@ -52,18 +51,18 @@ h2 {
   align-items: center;
   gap: 40px;
   width: 100%;
+  min-width: 120px;
   height: auto;
   border: solid thin;
   border-radius: 5%;
   position: relative;
-  background-color: #fff;
+  background-color: #4d09ba6f;
 }
 
 .bookmark {
-  width: 70px;
   position: absolute;
   top: -20px;
-  right: 40px;
+  right: 5px;
 }
 
 .question {
@@ -72,10 +71,9 @@ h2 {
 
 .button {
   border-radius: 10%;
-  background-color: #fff;
   border: double;
   padding: 10px;
-  background-color: #0999ac56;
+  background-color: #4d09ba84;
 }
 
 .tags {
@@ -94,5 +92,20 @@ h2 {
   border-radius: 10%;
   padding: 5px;
   font-size: 10px;
-  background-color: #0000002f;
+  background-color: #00000065;
+}
+
+.navigation {
+  border: #000 double medium;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #de7f13;
+  height: 100px;
+  z-index: 1;
+  gap: 15px;
 }
