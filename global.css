@@ -1,0 +1,65 @@
+@import "./css/quizz-page.css";
+@import "./css/bookmark-page.css";
+@import "./css/profile-page.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #de7f1357;
+}
+
+header {
+  border: #000 double medium;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #de7f13;
+  height: 105px;
+  z-index: 1;
+  gap: 5px;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 100px 150px 100px;
+  gap: 80px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.header-subtitle {
+  padding: 0;
+  margin-top: 0;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,0 +1,18 @@
+.tags {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.tag-item {
+  border: double #000;
+  border-radius: 10%;
+  padding: 5px;
+  font-size: 10px;
+  background-color: #00000065;
+}
