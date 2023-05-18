@@ -1,4 +1,4 @@
-.question-box {
+.questioncard__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,11 +13,11 @@
   background-color: #4d09ba6f;
 }
 
-.question {
+.questioncard__question {
   text-align: center;
 }
 
-.bookmark {
+.questioncard__bookmark {
   position: absolute;
   top: -20px;
   right: 5px;

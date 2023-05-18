@@ -4,26 +4,22 @@
   justify-content: center;
 }
 
-.counter-question,
-.counter-bookmark {
+.counter__question,
+.counter__bookmark {
   display: flex;
-}
-.image-question {
-  height: 30px;
-}
-
-.counter-question {
   align-self: center;
   margin-left: 10px;
+}
+
+.counter__question {
   margin-right: 15px;
 }
 
-.counter-bookmark {
-  align-self: center;
-  margin-left: 10px;
+.counter__question--image {
+  height: 30px;
 }
 
-.image-bookmark {
+.counter__bookmark--image {
   height: 30px;
   margin-left: 15px;
 }

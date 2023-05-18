@@ -1,4 +1,4 @@
-.tags {
+.tag {
   list-style: none;
   display: flex;
   gap: 5px;
@@ -9,7 +9,7 @@
   padding: 10px;
 }
 
-.tag-item {
+.tag__item {
   border: double #000;
   border-radius: 10%;
   padding: 5px;

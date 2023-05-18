@@ -5,14 +5,14 @@
   gap: 40px;
 }
 
-.profile-picture {
+.profile__picture {
   border: double;
   border-radius: 50%;
   height: 250px;
   width: 250px;
 }
 
-.profile-description {
+.profile__description {
   text-align: justify;
   margin-top: 15px;
   line-height: 1.5;
