@@ -15,11 +15,11 @@
   margin-right: 15px;
 }
 
-.counter__question--image {
+.counter__question-icon {
   height: 30px;
 }
 
-.counter__bookmark--image {
+.counter__bookmark-icon {
   height: 30px;
   margin-left: 15px;
 }
