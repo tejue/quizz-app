@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="global.css" type="text/css" media="all" />
+    <script src="./js/index.js" defer></script>
     <title>Quiz-App</title>
   </head>
-  <body>
+  <body data-js="body">
     <header>
       <h1>Quiz App</h1>
       <h2 class="h1__subtitle">My Profile</h2>
@@ -41,7 +42,9 @@
       </section>
       <section class="settings">
         <h3>Settings</h3>
-        <button class="button--dark" type="button">Darkmode</button>
+        <button class="button--dark" data-js="button-darkmode" type="button">
+          Darkmode
+        </button>
       </section>
     </main>
     <footer>
