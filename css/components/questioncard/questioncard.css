@@ -1,0 +1,24 @@
+.questioncard__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  min-width: 120px;
+  height: auto;
+  border: solid thin;
+  border-radius: 5%;
+  position: relative;
+  background-color: #4d09ba6f;
+}
+
+.questioncard__question {
+  text-align: center;
+}
+
+.questioncard__bookmark-icon {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+}

@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="global.css" type="text/css" media="all" />
     <title>Quiz-App</title>
   </head>
   <body>
     <header>
       <h1>Quiz App</h1>
-      <h2 class="header-subtitle">My Profile</h2>
+      <h2 class="h1__subtitle">My Profile</h2>
     </header>
     <main id="home">
       <section class="profile">
         <img src="./assets/images/feet-circle.png" class="profile-picture" />
-        <article class="profile-text">
-          <h3 class="profile-name">My Name</h3>
-          <p class="profile-description">
+        <article class="profile__text">
+          <h3 class="profile__name">My Name</h3>
+          <p class="profile__description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eum
             mollitia perferendis aperiam repellendus repellat iusto praesentium
             esse laborum ducimus sunt atque consequuntur illo, quibusdam harum
@@ -27,21 +27,21 @@
       </section>
       <section class="counter">
         <img
-          class="image-question"
+          class="counter__question-icon"
           src="/assets/images/question-circle-dark.svg"
-          alt="image of questionmark"
+          alt="questionmark-icon"
         />
-        <div class="counter-question">55</div>
+        <div class="counter__question">55</div>
         <img
-          class="image-bookmark"
+          class="counter__bookmark-icon"
           src="/assets/images/bookmark-dark.svg"
-          alt="image of bookmark"
+          alt="bookmark-icon"
         />
-        <div class="counter-bookmark">1</div>
+        <div class="counter__bookmark">1</div>
       </section>
       <section class="settings">
         <h3>Settings</h3>
-        <button type="button">Darkmode</button>
+        <button class="button--dark" type="button">Darkmode</button>
       </section>
     </main>
     <footer>

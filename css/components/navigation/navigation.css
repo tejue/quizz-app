@@ -1,0 +1,14 @@
+.navigation {
+  border: #000 double medium;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #de7f13;
+  height: 100px;
+  z-index: 1;
+  gap: 15px;
+}

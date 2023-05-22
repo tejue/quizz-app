@@ -4,37 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="global.css" type="text/css" media="all" />
     <title>Quizz-App</title>
   </head>
   <body>
     <header>
       <h1>Quiz App</h1>
-      <h2 class="header-subtitle">My Bookmarks</h2>
+      <h2 class="h1__subtitle">My Bookmarks</h2>
     </header>
     <main id="home">
-      <section class="question-box">
-        <img src="./assets/images/bookmark-dark.svg" class="bookmark" />
-        <h2 class="question">Wo ist bei einem Schiff Steuerbord?</h2>
-        <button class="button">Show Answer</button>
-        <ul class="tags">
-          <li class="tag-item">#html</li>
-          <li class="tag-item">#flexbox</li>
-          <li class="tag-item">#css</li>
+      <section class="questioncard__box">
+        <img
+          src="./assets/images/bookmark-dark.svg"
+          class="questioncard__bookmark-icon"
+        />
+        <h2 class="questioncard__question">
+          Wo ist bei einem Schiff Steuerbord?
+        </h2>
+        <button class="button--purple">Show Answer</button>
+        <ul class="tag">
+          <li class="tag__item">#html</li>
+          <li class="tag__item">#flexbox</li>
+          <li class="tag__item">#css</li>
         </ul>
-        <span class="bookmark"></span>
       </section>
     </main>
     <footer>
       <nav class="navigation">
         <a href="index.html" class="navi"
-          ><img src="./assets/images/home-light.svg" alt="home"
+          ><img src="./assets/images/home-light.svg" alt="home-icon"
         /></a>
         <a href="#home" class="navi"
-          ><img src="./assets/images/bookmark-dark.svg" alt="bookmark"
+          ><img src="./assets/images/bookmark-dark.svg" alt="bookmark-icon"
         /></a>
         <a href="profile.html" class="navi"
-          ><img src="./assets/images/profile-light.svg" alt="profile"
+          ><img src="./assets/images/profile-light.svg" alt="profile-icon"
         /></a>
       </nav>
     </footer>
