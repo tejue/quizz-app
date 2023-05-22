@@ -2,6 +2,15 @@
 @import "./css/bookmark-page.css";
 @import "./css/profile-page.css";
 
+:root {
+  --black: #000;
+  --light-orange: #de7f1357;
+  --full-orange: #de7f13;
+  --full-purple: #4d09ba84;
+  --light-purple: #4d09ba6f;
+  --gray-purple: #00000065;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,11 +20,11 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #de7f1357;
+  background-color: var(--light-orange);
 }
 
 header {
-  border: #000 double medium;
+  border: var(--black) double medium;
   position: fixed;
   top: 0;
   right: 0;
@@ -23,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #de7f13;
+  background-color: var(--full-orange);
   height: 105px;
   z-index: 1;
   gap: 5px;
