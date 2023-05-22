@@ -68,6 +68,11 @@ h3 {
 }
 
 .darkmode {
-  background-color: var(--black);
-  color: white;
+  --black: #f8f3f3;
+  --light-orange: #1c236f9b;
+  --full-orange: #041e2b;
+  --full-purple: #4d09ba84;
+  --light-purple: #4323766f;
+  --gray-purple: #00000065;
+  color: #f8f3f3;
 }
