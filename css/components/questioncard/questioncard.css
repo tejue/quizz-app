@@ -10,7 +10,7 @@
   border: solid thin;
   border-radius: 5%;
   position: relative;
-  background-color: #4d09ba6f;
+  background-color: var(--light-purple);
 }
 
 .questioncard__question {
