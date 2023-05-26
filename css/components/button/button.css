@@ -4,9 +4,6 @@ button {
   padding: 10px;
 }
 
-.button--purple {
+.questioncard__button-answer {
   background-color: var(--full-purple);
-}
-
-.button--darkmode {
 }
