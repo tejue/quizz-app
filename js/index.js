@@ -13,8 +13,15 @@ answerButton?.addEventListener("click", () => {
 
   const buttonInitalText = "Show Answer";
   if (answerButton.textContent.includes(buttonInitalText)) {
-    answerButton.textContent = "HIde Answer";
+    answerButton.textContent = "Hide Answer";
   } else {
     answerButton.textContent = buttonInitalText;
   }
+});
+
+const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
+const bookmarkIcon = document.querySelector('[data-js="bookmark-icon"]');
+
+bookmarkIcon?.addEventListener("click", () => {
+  bookmarkIcon.classList.toggle("questioncard__bookmark-icon--light");
 });
