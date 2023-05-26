@@ -1,6 +1,12 @@
-.button--purple {
-  border-radius: 10%;
+button {
+  border-radius: var(--border-radius);
   border: double;
   padding: 10px;
+}
+
+.button--purple {
   background-color: var(--full-purple);
+}
+
+.button--darkmode {
 }

@@ -5,13 +5,12 @@
   flex-wrap: wrap;
   align-items: flex-end;
   align-self: flex-start;
-  margin-top: 20px;
-  padding: 10px;
+  margin: 30px 10px 10px 10px;
 }
 
 .tag__item {
   border: double var(--black);
-  border-radius: 10%;
+  border-radius: var(--border-radius);
   padding: 5px;
   font-size: 10px;
   background-color: var(--gray-purple);
