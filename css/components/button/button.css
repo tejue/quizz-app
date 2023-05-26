@@ -1,6 +1,9 @@
-.button--purple {
-  border-radius: 10%;
+button {
+  border-radius: var(--border-radius);
   border: double;
   padding: 10px;
+}
+
+.questioncard__button-answer {
   background-color: var(--full-purple);
 }

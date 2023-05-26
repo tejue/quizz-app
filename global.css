@@ -9,6 +9,8 @@
   --full-purple: #4d09ba84;
   --light-purple: #4d09ba6f;
   --gray-purple: #00000065;
+
+  --border-radius: 0.5%;
 }
 
 * {
@@ -46,16 +48,13 @@ h1 {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 150px 100px 150px 100px;
+  padding: 150px 0;
   gap: 80px;
 }
 
 h2 {
   font-size: 20px;
-  padding: 20px;
-  margin-top: 25px;
 }
 
 h3 {
