@@ -21,7 +21,11 @@
   font-size: 0.9em;
   text-align: center;
   margin: 0 20px 0 20px;
-  _visibility: hidden;
+  visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .questioncard__bookmark-icon {
