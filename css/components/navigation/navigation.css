@@ -12,3 +12,13 @@
   z-index: 1;
   gap: 15px;
 }
+
+.navigation__icon,
+.navigation__icon--light {
+  height: 48px;
+}
+
+.navigation__icon--light {
+  filter: invert(100%) sepia(57%) saturate(0%) hue-rotate(200deg)
+    brightness(107%) contrast(101%);
+}
