@@ -13,28 +13,31 @@
       <h1>Quiz App</h1>
       <h2 class="h1__subtitle">Question-Creator</h2>
     </header>
-    <main id="home">
-      <form class="form">
+    <main id="home" data-js="new-questionpart">
+      <form class="form" data-js="form">
         <label for="new-question">Your Question:</label>
         <textarea
           id="new-question"
-          name="new-question"
+          name="question"
           maxlength="150"
-          data-js="length-calculator"
+          data-js="newQuestion"
+          required
         ></textarea>
         <label for="new-answer">Your Answer:</label>
         <textarea
           id="new-answer"
-          name="new-answer"
+          name="answer"
           maxlength="150"
-          data-js="length-calculator"
+          data-js="length-calculator new-answer"
+          required
         ></textarea>
         <label for="new-tag">Tag:</label>
-        <input id="new-tag" type="text" />
+        <input id="new-tag" type="text" name="tag" required />
         <button type="submit" class="button__submit" data-js="submit">
           Submit your Question
         </button>
       </form>
+      <ul></ul>
     </main>
     <footer>
       <nav class="navigation">
