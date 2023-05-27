@@ -1,12 +1,12 @@
 .counter {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  _flex-direction: row;
+  _justify-content: center;
 }
 
 .counter__question,
 .counter__bookmark {
-  display: flex;
+  _display: flex;
   align-self: center;
   margin-left: 10px;
 }

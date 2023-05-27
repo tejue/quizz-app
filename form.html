@@ -5,39 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="global.css" type="text/css" media="all" />
-    <script src="./js/index.js" defer></script>
+    <script src="./js/form.js" defer></script>
     <title>Quizz-App</title>
   </head>
   <body data-js="body">
     <header>
       <h1>Quiz App</h1>
-      <h2 class="h1__subtitle">Sail Away</h2>
+      <h2 class="h1__subtitle">Question-Creator</h2>
     </header>
-    <main id="home"></main>
+    <main id="home">
+      <form class="form">
+        <label for="new-question">Your Question:</label>
+        <textarea
+          id="new-question"
+          name="new-question"
+          maxlength="150"
+          data-js="length-calculator"
+        ></textarea>
+        <label for="new-answer">Your Answer:</label>
+        <textarea
+          id="new-answer"
+          name="new-answer"
+          maxlength="150"
+          data-js="length-calculator"
+        ></textarea>
+        <label for="new-tag">Tag:</label>
+        <input id="new-tag" type="text" />
+        <button type="submit" class="button__submit" data-js="submit">
+          Submit your Question
+        </button>
+      </form>
+    </main>
     <footer>
       <nav class="navigation">
         <a href="index.html" class="navi"
           ><img
             class="navigation__icon--light"
-            src="./assets/images/questionmark-dark.svg"
+            src="./assets/images/questionmark-dark-excali.svg"
             alt="home"
         /></a>
         <a href="bookmarks.html" class="navi"
           ><img
             class="navigation__icon--light"
-            src="./assets/images/bookmark-dark.svg"
+            src="./assets/images/bookmark-dark-empty-box-excali.svg"
             alt="bookmark"
         /></a>
         <a href="#home" class="navi"
           ><img
             class="navigation__icon--light"
-            src="./assets/images/add-dark.svg"
+            src="./assets/images/create-dark-excali.svg"
             alt="form"
         /></a>
         <a href="profile.html" class="navi"
           ><img
             class="navigation__icon--light"
-            src="./assets/images/profile-dark.svg"
+            src="./assets/images/profile-dark-excali.svg"
             alt="profile"
         /></a>
       </nav>

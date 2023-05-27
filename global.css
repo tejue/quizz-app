@@ -1,5 +1,6 @@
 @import "./css/quizz-page.css";
 @import "./css/bookmark-page.css";
+@import "./css/form-page.css";
 @import "./css/profile-page.css";
 
 :root {
@@ -20,8 +21,8 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Courier New", Courier, monospace, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: var(--light-orange);
 }
 
