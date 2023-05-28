@@ -2,6 +2,7 @@ button {
   border-radius: var(--border-radius);
   border: double;
   padding: 10px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .questioncard__button-answer {

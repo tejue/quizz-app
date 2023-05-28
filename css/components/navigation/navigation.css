@@ -11,6 +11,7 @@
   height: 100px;
   z-index: 1;
   gap: 15px;
+  list-style: none;
 }
 
 .navigation__icon,
