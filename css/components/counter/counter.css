@@ -1,25 +1,11 @@
 .counter {
   display: flex;
-  _flex-direction: row;
-  _justify-content: center;
+  gap: 30px;
 }
 
 .counter__question,
 .counter__bookmark {
-  _display: flex;
-  align-self: center;
-  margin-left: 10px;
-}
-
-.counter__question {
-  margin-right: 15px;
-}
-
-.counter__question-icon {
-  height: 30px;
-}
-
-.counter__bookmark-icon {
-  height: 30px;
-  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

@@ -1,0 +1,29 @@
+.questioncard__bookmark-icon {
+  position: absolute;
+  top: -5px;
+  right: -11px;
+  width: 45px;
+  height: 45px;
+  filter: invert(100%) sepia(57%) saturate(0%) hue-rotate(200deg)
+    brightness(107%) contrast(101%);
+  opacity: 40%;
+}
+
+.questioncard__bookmark-icon-active {
+  filter: var(--svg-filter-color);
+  opacity: 100%;
+}
+
+.navigation__icon {
+  height: 48px;
+  filter: var(--svg-filter-color-light);
+}
+
+.navigation__icon-active {
+  filter: var(--svg-filter-color);
+}
+
+.counter__icon {
+  height: 30px;
+  filter: var(--svg-filter-color);
+}

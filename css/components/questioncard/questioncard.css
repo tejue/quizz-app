@@ -24,25 +24,20 @@
   visibility: hidden;
 }
 
-.questioncard__bookmark-icon--dark {
-  position: absolute;
-  top: -5px;
-  right: -11px;
-  width: 45px;
-  height: 45px;
+.questioncard__tag-list {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-self: flex-start;
+  margin: 30px 10px 10px 10px;
 }
 
-.questioncard__bookmark-icon-button {
-  position: absolute;
-  width: 30px;
-  height: 35px;
-  top: -10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-}
-
-.questioncard__bookmark-icon--light {
-  filter: invert(100%) sepia(57%) saturate(0%) hue-rotate(200deg)
-    brightness(107%) contrast(101%);
+.questioncard__tag-list-item {
+  border: double var(--black);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  font-size: 10px;
+  background-color: var(--gray-purple);
 }

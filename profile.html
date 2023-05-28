@@ -11,7 +11,7 @@
   <body data-js="body">
     <header>
       <h1>Quiz App</h1>
-      <h2 class="h1__subtitle">My Profile</h2>
+      <h2>My Profile</h2>
     </header>
     <main id="home">
       <section class="profile">
@@ -27,18 +27,20 @@
         </article>
       </section>
       <section class="counter">
-        <img
-          class="counter__question-icon"
-          src="/assets/images/questionmark-dark-excali.svg"
-          alt="questionmark-icon"
-        />
-        <div class="counter__question">55</div>
-        <img
-          class="counter__bookmark-icon"
-          src="/assets/images/bookmark-dark-filled-box-excali.svg"
-          alt="bookmark-icon"
-        />
-        <div class="counter__bookmark">1</div>
+        <p class="counter__question">
+          <img
+            class="counter__icon"
+            src="/assets/images/questionmark-dark-excali.svg"
+            alt="questionmark-icon"
+          />5
+        </p>
+        <p class="counter__bookmark">
+          <img
+            class="counter__icon"
+            src="/assets/images/bookmark-dark-filled-box-excali.svg"
+            alt="bookmark-icon"
+          />1
+        </p>
       </section>
       <section class="settings">
         <h3>Settings</h3>
@@ -48,38 +50,38 @@
       </section>
     </main>
     <footer>
-      <nav class="navigation">
+      <nav>
         <ul class="navigation">
-          <li class="navigation__part">
-            <a href="index.html" class="navi"
+          <li class="navigation__tab">
+            <a href="index.html"
               ><img
-                class="navigation__icon--light"
+                class="navigation__icon"
                 src="./assets/images/questionmark-dark-excali.svg"
-                alt="home"
+                alt="questionmark icon"
             /></a>
           </li>
-          <li>
-            <a href="bookmarks.html" class="navi"
+          <li class="navigation__tab">
+            <a href="bookmarks.html"
               ><img
-                class="navigation__icon--light"
+                class="navigation__icon"
                 src="./assets/images/bookmark-dark-empty-box-excali.svg"
-                alt="bookmark"
+                alt="bookmark icon"
             /></a>
           </li>
-          <li>
-            <a href="form.html" class="navi"
+          <li class="navigation__tab">
+            <a href="form.html"
               ><img
-                class="navigation__icon--light"
+                class="navigation__icon"
                 src="./assets/images/create-dark-excali.svg"
-                alt="form"
+                alt="form icon"
             /></a>
           </li>
-          <li>
-            <a href="#home" class="navi"
+          <li class="navigation__tab navigation__tab-active">
+            <a href="#home"
               ><img
-                class="navigation__icon--light"
+                class="navigation__icon navigation__icon-active"
                 src="./assets/images/profile-dark-excali.svg"
-                alt="profile"
+                alt="profile icon"
             /></a>
           </li>
         </ul>
