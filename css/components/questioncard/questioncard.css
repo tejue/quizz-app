@@ -5,10 +5,9 @@
   gap: 20px;
   width: 80vw;
   height: 100%;
-  border: solid thin;
   border-radius: var(--border-radius);
   position: relative;
-  background-color: var(--light-purple);
+  background-color: var(--color-questioncard);
 }
 
 .questioncard__question {
@@ -35,9 +34,8 @@
 }
 
 .questioncard__tag-list-item {
-  border: double var(--black);
   border-radius: var(--border-radius);
   padding: 5px;
   font-size: 10px;
-  background-color: var(--gray-purple);
+  background-color: var(--color-questioncard-tag);
 }

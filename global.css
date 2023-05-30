@@ -4,15 +4,20 @@
 @import "./css/profile-page.css";
 
 :root {
-  --black: #000;
-  --light-orange: #f4d3ae;
-  --full-orange: #de7f13;
-  --full-purple: #7b41b7;
-  --light-purple: #ac7bb3;
-  --gray-purple: #684a6c;
+  --color-text: #000;
+  --color-border: #000;
+  --color-background: #f4d3ae;
+  --color-header: #de7f13;
+  --color-footer: var(--color-header);
+  --color-questioncard: #ac7bb3;
+  --color-questioncard-button: #7b41b7;
+  --color-questioncard-tag: #684a6c;
+  --color-questioncard-icon-active: var(--color-questioncard-tag);
+  --color-nav-icon-active: var(--color-questioncard-tag);
+  --color-nav-tab-active: var(--color-background);
 
-  --svg-filter-color: invert(29%) sepia(31%) saturate(530%) hue-rotate(246deg)
-    brightness(99%) contrast(89%);
+  --svg-color-icon-active: invert(29%) sepia(31%) saturate(530%)
+    hue-rotate(246deg) brightness(99%) contrast(89%);
   --svg-filter-color-light: invert(100%) sepia(57%) saturate(0%)
     hue-rotate(200deg) brightness(107%) contrast(101%);
 
@@ -28,11 +33,10 @@
 body {
   font-family: "Courier New", Courier, monospace, "Trebuchet MS",
     "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: var(--light-orange);
+  background-color: var(--color-background);
 }
 
 header {
-  border: var(--black) double medium;
   position: fixed;
   top: 0;
   right: 0;
@@ -40,7 +44,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: var(--full-orange);
+  background-color: var(--color-header);
   height: 105px;
   z-index: 1;
   gap: 5px;
@@ -69,23 +73,26 @@ h3 {
   text-align: center;
 }
 
-a:link a:visited {
+a {
   text-decoration: none;
   color: black;
 }
 
-a:hover {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   filter: invert(29%) sepia(31%) saturate(530%) hue-rotate(246deg)
     brightness(99%) contrast(89%);
 }
 
 .darkmode {
-  --black: #f8f3f3;
-  --light-orange: #1c236f9b;
-  --full-orange: #041e2b;
-  --full-purple: #4d09ba84;
-  --light-purple: #4323766f;
-  --gray-purple: #00000065;
+  --color-text: #f8f3f3;
+  --color-border: #f8f3f3;
+  --color-background: #1c236f9b;
+  --color-header: #041e2b;
+  --color-questioncard-button: #4d09ba84;
+  --color-questioncard: #4323766f;
+  --color-questioncard: #00000065;
   color: #f8f3f3;
 }

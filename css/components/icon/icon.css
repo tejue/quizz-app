@@ -10,7 +10,7 @@
 }
 
 .questioncard__bookmark-icon-active {
-  filter: var(--svg-filter-color);
+  filter: var(--svg-color-icon-active);
   opacity: 100%;
 }
 
@@ -20,10 +20,10 @@
 }
 
 .navigation__icon-active {
-  filter: var(--svg-filter-color);
+  filter: var(--svg-color-icon-active);
 }
 
 .counter__icon {
   height: 30px;
-  filter: var(--svg-filter-color);
+  filter: var(--svg-color-icon-active);
 }

@@ -1,12 +1,12 @@
 button {
-  border-radius: var(--border-radius);
-  border: double;
+  border-radius: 10px;
+  border: none;
   padding: 10px;
   font-family: "Courier New", Courier, monospace;
 }
 
 .questioncard__button-answer {
-  background-color: var(--full-purple);
+  background-color: var(--color-questioncard-button);
 }
 
 .questioncard__bookmark-icon-button {
