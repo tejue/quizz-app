@@ -20,17 +20,18 @@
           id="new-question"
           name="question"
           maxlength="150"
-          data-js="newQuestion"
+          data-js="form-textinput"
           required
         ></textarea>
+        <small><span data-js="characters-left"></span> characters left</small>
         <label for="new-answer">Your Answer:</label>
         <textarea
           id="new-answer"
           name="answer"
-          maxlength="150"
-          data-js="length-calculator new-answer"
+          data-js="form-textinput"
           required
         ></textarea>
+        <small><span data-js="characters-left"></span> characters left</small>
         <label for="new-tag">Tag:</label>
         <input id="new-tag" type="text" name="tag" required />
         <button type="submit" class="button__submit" data-js="submit">

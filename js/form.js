@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
 
   buttonBookmark.classList.add("questioncard__bookmark-icon-button");
 
-  bookmarkIcon.classList.add("questioncard__bookmark-icon--dark");
+  bookmarkIcon.classList.add("questioncard__bookmark-icon");
   bookmarkIcon.setAttribute(
     "src",
     "./assets/images/bookmark-dark-filled-excali.svg"
@@ -49,4 +49,18 @@ form.addEventListener("submit", (event) => {
 
   event.target.reset();
   event.target.elements.question.focus();
+});
+
+const formTextinput = document.querySelector('[data-js="form-textinput"]');
+const charactersLeft = document.querySelector('[data-js="characters-left"]');
+const maxLength = formTextinput.getAttribute("maxlength");
+
+const updateCharactersLeft = (value) => {
+  charactersLeft.innerText = value;
+};
+
+updateCharactersLeft(maxLength);
+
+formTextinput.addEventListener("input", () => {
+  updateCharactersLeft(maxLength - formTextinput.value.length);
 });
