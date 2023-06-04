@@ -1,6 +1,7 @@
 .navigation {
   list-style: none;
   background-color: var(--color-footer);
+  border: solid thin #808080;
   position: fixed;
   bottom: 0;
   left: 0;

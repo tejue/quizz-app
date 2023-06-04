@@ -15,25 +15,40 @@
     </header>
     <main id="home" data-js="new-questionpart">
       <form class="form" data-js="form">
-        <label for="new-question">Your Question:</label>
+        <label for="new-question">Your question:</label>
         <textarea
           id="new-question"
           name="question"
           maxlength="150"
-          data-js="form-textinput"
+          rows="5"
+          data-js="textinput-question"
           required
         ></textarea>
-        <small><span data-js="characters-left"></span> characters left</small>
-        <label for="new-answer">Your Answer:</label>
+        <small
+          ><span data-js="characters-left-question"></span> characters
+          left</small
+        >
+        <label for="new-answer">Your answer:</label>
         <textarea
           id="new-answer"
           name="answer"
-          data-js="form-textinput"
+          maxlength="150"
+          rows="5"
+          data-js="textinput-answer"
           required
         ></textarea>
-        <small><span data-js="characters-left"></span> characters left</small>
+        <small
+          ><span data-js="characters-left-answer"></span> characters left</small
+        >
         <label for="new-tag">Tag:</label>
-        <input id="new-tag" type="text" name="tag" required />
+        <input
+          id="new-tag"
+          type="text"
+          name="tag"
+          pattern="#\w+"
+          placeholder="Please start your tag with a '#'"
+          required
+        />
         <button type="submit" class="button__submit" data-js="submit">
           Submit your Question
         </button>

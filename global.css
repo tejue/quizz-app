@@ -41,6 +41,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  border: solid thin #808080;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -82,8 +83,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  filter: invert(29%) sepia(31%) saturate(530%) hue-rotate(246deg)
-    brightness(99%) contrast(89%);
+  filter: var(--svg-color-icon-active);
 }
 
 .darkmode {

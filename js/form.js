@@ -18,6 +18,7 @@ form.addEventListener("submit", (event) => {
   newQuestioncard.classList.add("questioncard__box");
 
   buttonBookmark.classList.add("questioncard__bookmark-icon-button");
+  buttonBookmark.setAttribute("type", "button");
 
   bookmarkIcon.classList.add("questioncard__bookmark-icon");
   bookmarkIcon.setAttribute(
@@ -29,6 +30,7 @@ form.addEventListener("submit", (event) => {
 
   button.classList.add("questioncard__button-answer");
   button.textContent = "Show Answer";
+  button.setAttribute("type", "button");
 
   newAnswer.classList.add("questioncard__answer");
   newAnswer.textContent = data.answer;
@@ -51,16 +53,35 @@ form.addEventListener("submit", (event) => {
   event.target.elements.question.focus();
 });
 
-const formTextinput = document.querySelector('[data-js="form-textinput"]');
-const charactersLeft = document.querySelector('[data-js="characters-left"]');
-const maxLength = formTextinput.getAttribute("maxlength");
+// const questionFormTextinput = document.querySelector(
+//   '[data-js="textinput-question"]'
+// );
+// const counterOutput = document.querySelector(
+//   '[data-js="characters-left-question"]'
+// );
+// const maxLengthQuestion = questionFormTextinput.getAttribute("maxlength");
 
-const updateCharactersLeft = (value) => {
-  charactersLeft.innerText = value;
-};
+// const updateCounterOutput = (value) => {
+//   counterOutput.innerText = value;
+// };
 
-updateCharactersLeft(maxLength);
+// updateCounterOutput(maxLengthQuestion);
 
-formTextinput.addEventListener("input", () => {
-  updateCharactersLeft(maxLength - formTextinput.value.length);
+// questionFormTextinput.addEventListener("input", () => {
+//   updateCounterOutput(maxLengthQuestion - questionFormTextinput.value.length);
+// });
+
+const allFormTextinputs = document.querySelectorAll('[data-js*="textinput-"]');
+const allCounterOutputs = document.querySelectorAll(
+  '[data-js*="characters-left"]'
+);
+
+allFormTextinputs.forEach((formTextinput, index) => {
+  allCounterOutputs.forEach((counterOutput) => {
+    counterOutput.innerText = formTextinput.maxLength;
+  });
+  formTextinput.addEventListener("input", () => {
+    const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
+    allCounterOutputs[index].innerText = charactersLeft;
+  });
 });
