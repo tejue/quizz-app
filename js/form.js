@@ -6,6 +6,7 @@ form.addEventListener("submit", (event) => {
 
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
+
   const newQuestioncard = document.createElement("section");
   const buttonBookmark = document.createElement("button");
   const bookmarkIcon = document.createElement("img");
@@ -25,6 +26,7 @@ form.addEventListener("submit", (event) => {
     "src",
     "./assets/images/bookmark-dark-filled-excali.svg"
   );
+
   newQuestion.classList.add("questioncard__question");
   newQuestion.textContent = data.question;
 
@@ -41,35 +43,19 @@ form.addEventListener("submit", (event) => {
   newTaglistItem.textContent = data.tag;
 
   newQuestionPart.append(newQuestioncard);
-  newQuestioncard.append(buttonBookmark);
   buttonBookmark.append(bookmarkIcon);
-  newQuestioncard.append(newQuestion);
-  newQuestioncard.append(button);
-  newQuestioncard.append(newAnswer);
-  newQuestioncard.append(newTaglist);
+  newQuestioncard.append(
+    buttonBookmark,
+    newQuestion,
+    button,
+    newAnswer,
+    newTaglist
+  );
   newTaglist.append(newTaglistItem);
 
   event.target.reset();
   event.target.elements.question.focus();
 });
-
-// const questionFormTextinput = document.querySelector(
-//   '[data-js="textinput-question"]'
-// );
-// const counterOutput = document.querySelector(
-//   '[data-js="characters-left-question"]'
-// );
-// const maxLengthQuestion = questionFormTextinput.getAttribute("maxlength");
-
-// const updateCounterOutput = (value) => {
-//   counterOutput.innerText = value;
-// };
-
-// updateCounterOutput(maxLengthQuestion);
-
-// questionFormTextinput.addEventListener("input", () => {
-//   updateCounterOutput(maxLengthQuestion - questionFormTextinput.value.length);
-// });
 
 const allFormTextinputs = document.querySelectorAll('[data-js*="textinput-"]');
 const allCounterOutputs = document.querySelectorAll(

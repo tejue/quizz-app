@@ -2,7 +2,7 @@ button {
   border-radius: 10px;
   border: none;
   padding: 10px;
-  font-family: "Courier New", Courier, monospace;
+  width: 200px;
 }
 
 .questioncard__button-answer {
@@ -21,4 +21,6 @@ button {
 
 .button__submit {
   margin-top: 30px;
+
+  justify-self: center;
 }
