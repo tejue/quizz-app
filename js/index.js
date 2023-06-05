@@ -23,5 +23,5 @@ const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
 const bookmarkIcon = document.querySelector('[data-js="bookmark-icon"]');
 
 bookmarkButton?.addEventListener("click", () => {
-  bookmarkIcon.classList.toggle("questioncard__bookmark-icon--light");
+  bookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
 });

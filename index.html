@@ -11,7 +11,7 @@
   <body data-js="body">
     <header>
       <h1>Quiz App</h1>
-      <h2 class="h1__subtitle">Sail Away</h2>
+      <h2>Sail Away</h2>
     </header>
     <main id="home">
       <section class="questioncard__box">
@@ -21,8 +21,8 @@
           data-js="bookmark-button"
         >
           <img
-            src="./assets/images/bookmark-dark.svg"
-            class="questioncard__bookmark-icon--dark"
+            src="./assets/images/bookmark-dark-filled-excali.svg"
+            class="questioncard__bookmark-icon"
             data-js="bookmark-icon"
           />
         </button>
@@ -52,8 +52,8 @@
           data-js="bookmark-button"
         >
           <img
-            src="./assets/images/bookmark-dark.svg"
-            class="questioncard__bookmark-icon--dark"
+            src="./assets/images/bookmark-dark-filled-excali.svg"
+            class="questioncard__bookmark-icon"
           />
         </button>
         <h3 class="questioncard__question">Was ist die Reling?</h3>
@@ -73,8 +73,8 @@
           data-js="bookmark-button"
         >
           <img
-            src="./assets/images/bookmark-dark.svg"
-            class="questioncard__bookmark-icon--dark"
+            src="./assets/images/bookmark-dark-filled-excali.svg"
+            class="questioncard__bookmark-icon"
           />
         </button>
         <h3 class="questioncard__question">Woran ist das Segel befestigt?</h3>
@@ -92,12 +92,14 @@
           data-js="bookmark-button"
         >
           <img
-            src="./assets/images/bookmark-dark.svg"
-            class="questioncard__bookmark-icon--dark"
+            src="./assets/images/bookmark-dark-filled-excali.svg"
+            class="questioncard__bookmark-icon"
           />
         </button>
         <h3 class="questioncard__question">Was ist ein Doppelter Schotstek?</h3>
-        <button class="questioncard__button-answer">Show Answer</button>
+        <button type="button" class="questioncard__button-answer">
+          Show Answer
+        </button>
         <p class="questioncard__answer">
           Der Doppelte Schotstek ist ein Seemannsknoten.
         </p>
@@ -113,14 +115,16 @@
           data-js="bookmark-button"
         >
           <img
-            src="./assets/images/bookmark-dark.svg"
-            class="questioncard__bookmark-icon--dark"
+            src="./assets/images/bookmark-dark-filled-excali.svg"
+            class="questioncard__bookmark-icon"
           />
         </button>
         <h3 class="questioncard__question">
           Was ist der Unterschied zwischen Luv und Lee?
         </h3>
-        <button class="questioncard__button-answer">Show Answer</button>
+        <button type="button" class="questioncard__button-answer">
+          Show Answer
+        </button>
         <p class="questioncard__answer">
           Luv und Lee sind die Seiten in Bezug zum Wind: Luv ist die Seite, die
           dem Wind zugewandt ist, Lee die ihm abgewandte Seite.
@@ -132,16 +136,41 @@
       </section>
     </main>
     <footer>
-      <nav class="navigation">
-        <a href="#home" class="navi"
-          ><img src="./assets/images/home-dark.svg" alt="home"
-        /></a>
-        <a href="bookmarks.html" class="navi"
-          ><img src="./assets/images/bookmark-light.svg" alt="bookmark"
-        /></a>
-        <a href="profile.html" class="navi"
-          ><img src="./assets/images/profile-light.svg" alt="profile"
-        /></a>
+      <nav>
+        <ul class="navigation">
+          <li class="navigation__tab navigation__tab-active">
+            <a href="#home"
+              ><img
+                class="navigation__icon navigation__icon-active"
+                src="./assets/images/questionmark-dark-excali.svg"
+                alt="questionmark icon"
+            /></a>
+          </li>
+          <li class="navigation__tab">
+            <a href="bookmarks.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/bookmark-dark-empty-box-excali.svg"
+                alt="bookmark icon"
+            /></a>
+          </li>
+          <li class="navigation__tab">
+            <a href="form.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/create-dark-excali.svg"
+                alt="form icon"
+            /></a>
+          </li>
+          <li class="navigation__tab">
+            <a href="profile.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/profile-dark-excali.svg"
+                alt="profile icon"
+            /></a>
+          </li>
+        </ul>
       </nav>
     </footer>
   </body>

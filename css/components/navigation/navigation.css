@@ -1,14 +1,24 @@
 .navigation {
-  border: var(--black) double medium;
+  list-style: none;
+  background-color: var(--color-footer);
+  border: solid thin #808080;
   position: fixed;
-  right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: var(--full-orange);
   height: 100px;
   z-index: 1;
-  gap: 15px;
+}
+
+.navigation__tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.navigation__tab-active {
+  background-color: var(--color-nav-tab-active);
 }

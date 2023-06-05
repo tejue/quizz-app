@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" type="text/css" media="all" />
+    <script src="./js/form.js" defer></script>
+    <title>Quizz-App</title>
+  </head>
+  <body data-js="body">
+    <header>
+      <h1>Quiz App</h1>
+      <h2>Question-Creator</h2>
+    </header>
+    <main id="home" data-js="new-questionpart">
+      <form class="form" data-js="form">
+        <label for="new-question">Your question:</label>
+        <textarea
+          id="new-question"
+          name="question"
+          maxlength="150"
+          rows="5"
+          data-js="textinput-question"
+          required
+        ></textarea>
+        <p class="input__counter">
+          <span data-js="characters-left-question"></span> characters left
+        </p>
+        <label for="new-answer">Your answer:</label>
+        <textarea
+          id="new-answer"
+          name="answer"
+          maxlength="150"
+          rows="5"
+          data-js="textinput-answer"
+          required
+        ></textarea>
+        <p class="input__counter">
+          <span data-js="characters-left-answer"></span> characters left
+        </p>
+        <label for="new-tag">Tag:</label>
+        <input
+          id="new-tag"
+          type="text"
+          name="tag"
+          pattern="#\w+"
+          placeholder="Please start your tag with a '#'"
+          required
+        />
+        <button type="submit" class="button__submit" data-js="submit">
+          Submit your Question
+        </button>
+      </form>
+      <ul></ul>
+    </main>
+    <footer>
+      <nav>
+        <ul class="navigation">
+          <li class="navigation__tab">
+            <a href="index.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/questionmark-dark-excali.svg"
+                alt="questionmark icon"
+            /></a>
+          </li>
+          <li class="navigation__tab">
+            <a href="bookmarks.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/bookmark-dark-empty-box-excali.svg"
+                alt="bookmark icon"
+            /></a>
+          </li>
+          <li class="navigation__tab navigation__tab-active">
+            <a href="#home"
+              ><img
+                class="navigation__icon navigation__icon-active"
+                src="./assets/images/create-dark-excali.svg"
+                alt="form icon"
+            /></a>
+          </li>
+          <li class="navigation__tab">
+            <a href="profile.html"
+              ><img
+                class="navigation__icon"
+                src="./assets/images/profile-dark-excali.svg"
+                alt="profile icon"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
