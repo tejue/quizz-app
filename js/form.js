@@ -1,6 +1,21 @@
 const form = document.querySelector('[data-js="form"]');
 const newQuestionPart = document.querySelector('[data-js="new-questionpart"]');
 
+const allFormTextinputs = document.querySelectorAll('[data-js*="textinput-"]');
+const allCounterOutputs = document.querySelectorAll(
+  '[data-js*="characters-left"]'
+);
+
+allFormTextinputs.forEach((formTextinput, index) => {
+  allCounterOutputs.forEach((counterOutput) => {
+    counterOutput.innerText = formTextinput.maxLength;
+  });
+  formTextinput.addEventListener("input", () => {
+    const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
+    allCounterOutputs[index].innerText = charactersLeft;
+  });
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -55,19 +70,8 @@ form.addEventListener("submit", (event) => {
 
   event.target.reset();
   event.target.elements.question.focus();
-});
 
-const allFormTextinputs = document.querySelectorAll('[data-js*="textinput-"]');
-const allCounterOutputs = document.querySelectorAll(
-  '[data-js*="characters-left"]'
-);
-
-allFormTextinputs.forEach((formTextinput, index) => {
-  allCounterOutputs.forEach((counterOutput) => {
-    counterOutput.innerText = formTextinput.maxLength;
-  });
-  formTextinput.addEventListener("input", () => {
-    const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
-    allCounterOutputs[index].innerText = charactersLeft;
+  allFormTextinputs.forEach((formTextinput, index) => {
+    allCounterOutputs[index].innerText = formTextinput.maxLength;
   });
 });
