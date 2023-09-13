@@ -1,0 +1,9 @@
+.form {
+  display: grid;
+  gap: 10px;
+  width: 80vw;
+}
+
+.input__counter {
+  text-align: right;
+}

@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.88283483179077 147.09065291251898" width="110.88283483179077" height="147.09065291251898">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/Users/teresa/.vscode/extensions/pomdtr.excalidraw-editor-3.5.1/public//dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/Users/teresa/.vscode/extensions/pomdtr.excalidraw-editor-3.5.1/public//dist/excalidraw-assets/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <g stroke-linecap="round"><g transform="translate(11.213430790230632 135.58462492399076) rotate(0 44.227986625664755 -62.03929846773127)"><path d="M-1.21 -1.52 C13.4 -8.57, 24.84 -18.72, 43.52 -30.34 M0.3 0.56 C10.94 -8.28, 23.6 -16.35, 43.24 -31.94 M42.03 -29.37 C54.65 -21.66, 63.48 -14.62, 87.72 1.51 M44.82 -30.66 C54.84 -24, 65.24 -14.83, 86.77 -0.3 M86.83 -1.42 C89.24 -49.72, 90.05 -96.04, 88.63 -123.31 M87.34 -0.01 C86.37 -38.6, 87.08 -77.71, 89.01 -122.84 M88.69 -122.21 C69.81 -121.14, 47.08 -124.83, 1.77 -125.58 M89.67 -121.95 C63.15 -122.74, 38.35 -122.87, 0.24 -123.81 M1.9 -124.61 C0.26 -83.81, -1.69 -42.96, 0.11 0.94 M1.83 -123.84 C0.5 -78.31, 1.07 -34.72, -0.63 -0.21" stroke="#000000" stroke-width="4" fill="none"></path></g></g><mask></mask></svg>
