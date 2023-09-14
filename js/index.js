@@ -1,27 +1,34 @@
 const body = document.querySelector('[data-js="body"]');
-const buttonDarkmode = document.querySelector('[data-js="button-darkmode"]');
+const answerButtons = document.querySelectorAll('[data-js="answer-button"]');
+const answers = document.querySelectorAll('[data-js="answer"]');
+const bookmarkButtons = document.querySelectorAll(
+  '[data-js="bookmark-button"]'
+);
+const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
 
-buttonDarkmode?.addEventListener("click", () => {
-  body.classList.toggle("darkmode");
+// const buttonDarkmode = document.querySelector('[data-js="button-darkmode"]');
+
+answerButtons.forEach((answerButton, answer) => {
+  answerButton?.addEventListener("click", () => {
+    const buttonInitalText = "Show Answer";
+    if (answerButton.textContent.includes(buttonInitalText)) {
+      answerButton.textContent = "Hide Answer";
+      answers[answer].style.display = "initial";
+    } else {
+      answerButton.textContent = buttonInitalText;
+      answers[answer].style.display = "none";
+    }
+  });
 });
 
-const answerButton = document.querySelector('[data-js="answer-button"]');
-const answer = document.querySelector('[data-js="hidden-answer"]');
-
-answerButton?.addEventListener("click", () => {
-  answer.classList.toggle("questioncard__answer");
-
-  const buttonInitalText = "Show Answer";
-  if (answerButton.textContent.includes(buttonInitalText)) {
-    answerButton.textContent = "Hide Answer";
-  } else {
-    answerButton.textContent = buttonInitalText;
-  }
+bookmarkButtons.forEach((bookmarkButton, bookmarkIcon) => {
+  bookmarkButton?.addEventListener("click", () => {
+    bookmarkIcons[bookmarkIcon].classList.toggle(
+      "questioncard__bookmark-icon-active"
+    );
+  });
 });
 
-const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
-const bookmarkIcon = document.querySelector('[data-js="bookmark-icon"]');
-
-bookmarkButton?.addEventListener("click", () => {
-  bookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
-});
+// buttonDarkmode?.addEventListener("click", () => {
+//   body.classList.toggle("darkmode");
+// });
