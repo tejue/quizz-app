@@ -6,8 +6,6 @@ const bookmarkButtons = document.querySelectorAll(
 );
 const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
 
-// const buttonDarkmode = document.querySelector('[data-js="button-darkmode"]');
-
 answerButtons.forEach((answerButton, answer) => {
   answerButton?.addEventListener("click", () => {
     const buttonInitalText = "Show Answer";
@@ -28,7 +26,3 @@ bookmarkButtons.forEach((bookmarkButton, bookmarkIcon) => {
     );
   });
 });
-
-// buttonDarkmode?.addEventListener("click", () => {
-//   body.classList.toggle("darkmode");
-// });
