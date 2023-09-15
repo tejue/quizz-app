@@ -7,12 +7,11 @@ const counterOutputs = document.querySelectorAll(
 
 formTextInputs.forEach((formTextinput, index) => {
   counterOutputs.forEach((counterOutput) => {
-    counterOutput.innerText = formTextinput.maxLength;
+    counterOutput.textContent = formTextinput.maxLength;
   });
   formTextinput.addEventListener("input", () => {
     const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
-    counterOutputs[index].innerText = charactersLeft;
-    console.log("hier", formTextinput.value.length);
+    counterOutputs[index].textContent = charactersLeft;
   });
 });
 
@@ -35,12 +34,14 @@ form.addEventListener("submit", (event) => {
 
   buttonBookmark.classList.add("questioncard__bookmark-icon-button");
   buttonBookmark.setAttribute("type", "button");
+  buttonBookmark.setAttribute("data-js", "bookmark-button");
 
   bookmarkIcon.classList.add("questioncard__bookmark-icon");
   bookmarkIcon.setAttribute(
     "src",
     "./assets/images/bookmark-dark-filled-excali.svg"
   );
+  bookmarkIcon.setAttribute("data-js", "bookmark-icon");
 
   newQuestion.classList.add("questioncard__question");
   newQuestion.textContent = data.question;
@@ -48,9 +49,11 @@ form.addEventListener("submit", (event) => {
   button.classList.add("questioncard__button-answer");
   button.textContent = "Show Answer";
   button.setAttribute("type", "button");
+  button.setAttribute("data-js", "answer-button");
 
   newAnswer.classList.add("questioncard__answer");
   newAnswer.textContent = data.answer;
+  newAnswer.setAttribute("data-js", "answer");
 
   newTaglist.classList.add("questioncard__tag-list");
 
@@ -72,6 +75,34 @@ form.addEventListener("submit", (event) => {
   event.target.elements.question.focus();
 
   formTextInputs.forEach((formTextinput, index) => {
-    counterOutputs[index].innerText = formTextinput.maxLength;
+    counterOutputs[index].textContent = formTextinput.maxLength;
+  });
+  // });
+
+  const answers = document.querySelectorAll('[data-js="answer"]');
+  const answerButtons = document.querySelectorAll('[data-js="answer-button"]');
+  const bookmarkButtons = document.querySelectorAll(
+    '[data-js="bookmark-button"]'
+  );
+  const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
+
+  const newnewAnswer = answers[answers.length - 1];
+  const newAnswerButton = answerButtons[answerButtons.length - 1];
+  const newBookmarkButton = bookmarkButtons[bookmarkButtons.length - 1];
+  const newBookmarkIcon = bookmarkIcons[bookmarkIcons.length - 1];
+
+  newAnswerButton.addEventListener("click", () => {
+    const buttonInitalText = "Show Answer";
+    if (newAnswerButton.textContent.includes(buttonInitalText)) {
+      newAnswerButton.textContent = "Hide Answer";
+      newnewAnswer.style.display = "initial";
+    } else {
+      newAnswerButton.textContent = buttonInitalText;
+      newnewAnswer.style.display = "none";
+    }
+  });
+
+  newBookmarkButton.addEventListener("click", () => {
+    newBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
   });
 });
