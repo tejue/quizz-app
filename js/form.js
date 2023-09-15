@@ -13,6 +13,7 @@ allFormTextinputs.forEach((formTextinput, index) => {
   formTextinput.addEventListener("input", () => {
     const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
     allCounterOutputs[index].innerText = charactersLeft;
+    console.log("hier", formTextinput.value.length);
   });
 });
 
