@@ -1,18 +1,17 @@
 const form = document.querySelector('[data-js="form"]');
 const newQuestionPart = document.querySelector('[data-js="new-questionpart"]');
-
-const allFormTextinputs = document.querySelectorAll('[data-js*="textinput-"]');
-const allCounterOutputs = document.querySelectorAll(
+const formTextInputs = document.querySelectorAll('[data-js*="textinput-"]');
+const counterOutputs = document.querySelectorAll(
   '[data-js*="characters-left"]'
 );
 
-allFormTextinputs.forEach((formTextinput, index) => {
-  allCounterOutputs.forEach((counterOutput) => {
+formTextInputs.forEach((formTextinput, index) => {
+  counterOutputs.forEach((counterOutput) => {
     counterOutput.innerText = formTextinput.maxLength;
   });
   formTextinput.addEventListener("input", () => {
     const charactersLeft = formTextinput.maxLength - formTextinput.value.length;
-    allCounterOutputs[index].innerText = charactersLeft;
+    counterOutputs[index].innerText = charactersLeft;
     console.log("hier", formTextinput.value.length);
   });
 });
@@ -72,7 +71,7 @@ form.addEventListener("submit", (event) => {
   event.target.reset();
   event.target.elements.question.focus();
 
-  allFormTextinputs.forEach((formTextinput, index) => {
-    allCounterOutputs[index].innerText = formTextinput.maxLength;
+  formTextInputs.forEach((formTextinput, index) => {
+    counterOutputs[index].innerText = formTextinput.maxLength;
   });
 });
