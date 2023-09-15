@@ -28,7 +28,6 @@ form.addEventListener("submit", (event) => {
   const newAnswerButton = document.createElement("button");
   const newAnswer = document.createElement("p");
   const newTaglist = document.createElement("ul");
-  const newTaglistItem = document.createElement("li");
 
   newQuestioncard.classList.add("questioncard__box");
 
@@ -57,8 +56,14 @@ form.addEventListener("submit", (event) => {
 
   newTaglist.classList.add("questioncard__tag-list");
 
-  newTaglistItem.classList.add("questioncard__tag-list-item");
-  newTaglistItem.textContent = data.tag;
+  const collectedNewTags = data.tag;
+  const newTags = collectedNewTags.split(/\s+/);
+  newTags.forEach((newTag) => {
+    const newTaglistItem = document.createElement("li");
+    newTaglistItem.textContent = "#" + newTag;
+    newTaglistItem.classList.add("questioncard__tag-list-item");
+    newTaglist.append(newTaglistItem);
+  });
 
   main.append(newQuestioncard);
   newBookmarkButton.append(newBookmarkIcon);
@@ -69,7 +74,6 @@ form.addEventListener("submit", (event) => {
     newAnswer,
     newTaglist
   );
-  newTaglist.append(newTaglistItem);
 
   event.target.reset();
   event.target.elements.question.focus();
@@ -77,7 +81,6 @@ form.addEventListener("submit", (event) => {
   formTextInputs.forEach((formTextinput, index) => {
     counterOutputs[index].textContent = formTextinput.maxLength;
   });
-  // });
 
   const createdAnswers = document.querySelectorAll('[data-js="answer"]');
   const createdAnswerButtons = document.querySelectorAll(
