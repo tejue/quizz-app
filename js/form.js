@@ -30,6 +30,7 @@ form.addEventListener("submit", (event) => {
   const newTaglist = document.createElement("ul");
 
   newQuestioncard.classList.add("questioncard__box");
+  newQuestioncard.setAttribute("data-js", "question-card");
 
   newBookmarkButton.classList.add("questioncard__bookmark-icon-button");
   newBookmarkButton.setAttribute("type", "button");
@@ -115,4 +116,13 @@ form.addEventListener("submit", (event) => {
   createdBookmarkButton.addEventListener("click", () => {
     createdBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
   });
+  counterCreatedNewCards();
 });
+
+function counterCreatedNewCards() {
+  const createdNewCards = document.querySelectorAll(
+    '[data-js="question-card"]'
+  );
+  const counterCreatedNewCards = createdNewCards.length;
+  console.log(counterCreatedNewCards);
+}
