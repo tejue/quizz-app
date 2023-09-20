@@ -19,7 +19,13 @@ answerButtons.forEach((answerButton, index) => {
 });
 
 bookmarkButtons.forEach((bookmarkButton, index) => {
-  bookmarkButton?.addEventListener("click", () => {
+  bookmarkButton.addEventListener("click", () => {
     bookmarkIcons[index].classList.toggle("questioncard__bookmark-icon-active");
+    const bookmarks = document.querySelectorAll(
+      ".questioncard__bookmark-icon-active"
+    );
+    const countBookmarks = bookmarks.length;
+    console.log(countBookmarks);
+    // localStorage.setItem("quizAppCounterBookmarks", countBookmarks);
   });
 });
