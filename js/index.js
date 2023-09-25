@@ -43,36 +43,5 @@ bookmarkButtons.forEach((bookmarkButton, index) => {
     storeBookmarks();
   });
 });
-// const bookmarks = document.querySelectorAll(
-//   ".questioncard__bookmark-icon-active"
-// );
-
-//     const storedBookmarks = [...bookmarks];
-//     console.log(storedBookmarks);
-//     const storedBookmarksIDs = [];
-
-//     for (let i = 0; i < storedBookmarks.length; i++) {
-//       storedBookmarksIDs.push(i);
-//     }
-//     // Speichern Sie die Indexpositionen der aktivierten Lesezeichen im Local Storage
-//     localStorage.setItem(
-//       "storedBookmarksIDs",
-//       JSON.stringify(storedBookmarksIDs)
-//     );
-//   });
-// });
-
-// Beim Laden der Seite die Anzahl der Lesezeichen und die Lesezeichen aus dem Local Storage abrufen und wiederherstellen
-// window.addEventListener("load", () => {
-//   const storedBookmarkIndexes =
-//     JSON.parse(localStorage.getItem("storedBookmarksIDs")) || [];
-
-//   // Hier werden die aktivierten Lesezeichen basierend auf den gespeicherten Indizes wiederhergestellt
-//   storedBookmarkIndexes.forEach((bookmarkIndex) => {
-//     bookmarkIcons[bookmarkIndex].classList.add(
-//       "questioncard__bookmark-icon-active"
-//     );
-//   });
-// });
 
 loadBookmarks();
