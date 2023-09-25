@@ -8,5 +8,5 @@ buttonDarkmode.addEventListener("click", () => {
   body.classList.toggle("darkmode");
 });
 
-// const countBookmarks = localStorage.getItem("quizAppCounterBookmarks");
-// counterBookmarks.textContent = countBookmarks;
+const countBookmarks = localStorage.getItem("quizAppCounterBookmarks");
+counterBookmarks.textContent = countBookmarks;
