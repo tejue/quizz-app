@@ -18,14 +18,28 @@ answerButtons.forEach((answerButton, index) => {
   });
 });
 
+function storeBookmarks() {
+  const bookmarkData = [];
+  bookmarkIcons.forEach((bookmarIcon, index) => {
+    if (bookmarIcon.classList.contains("questioncard__bookmark-icon-active")) {
+      bookmarkData.push(index);
+    }
+  });
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarkData));
+}
+
+function loadBookmarks() {
+  const bookmarkData = JSON.parse(localStorage.getItem("bookmarks")) || [];
+  bookmarkData.forEach((index) => {
+    bookmarkIcons[index].classList.add("questioncard__bookmark-icon-active");
+  });
+}
+
 bookmarkButtons.forEach((bookmarkButton, index) => {
   bookmarkButton.addEventListener("click", () => {
     bookmarkIcons[index].classList.toggle("questioncard__bookmark-icon-active");
-    const bookmarks = document.querySelectorAll(
-      ".questioncard__bookmark-icon-active"
-    );
-    const countBookmarks = bookmarks.length;
-    console.log(countBookmarks);
-    // localStorage.setItem("quizAppCounterBookmarks", countBookmarks);
+    storeBookmarks();
   });
 });
+
+loadBookmarks();

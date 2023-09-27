@@ -21,21 +21,36 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  const newQuestioncard = document.createElement("section");
-  const newBookmarkButton = document.createElement("button");
-  const newBookmarkIcon = document.createElement("img");
-  const newQuestion = document.createElement("h3");
-  const newAnswerButton = document.createElement("button");
-  const newAnswer = document.createElement("p");
-  const newTaglist = document.createElement("ul");
+  createCard(data);
 
+  const cardData = {
+    question: data.question,
+    answer: data.answer,
+    tag: data.tag,
+  };
+
+  const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  cards.push(cardData);
+  localStorage.setItem("cards", JSON.stringify(cards));
+
+  formTextInputs.forEach((formTextinput, index) => {
+    counterOutputs[index].textContent = formTextinput.maxLength;
+  });
+  event.target.reset();
+  event.target.elements.question.focus();
+});
+
+function createCard(cardData) {
+  const newQuestioncard = document.createElement("section");
   newQuestioncard.classList.add("questioncard__box");
   newQuestioncard.setAttribute("data-js", "question-card");
 
+  const newBookmarkButton = document.createElement("button");
   newBookmarkButton.classList.add("questioncard__bookmark-icon-button");
   newBookmarkButton.setAttribute("type", "button");
   newBookmarkButton.setAttribute("data-js", "bookmark-button");
 
+  const newBookmarkIcon = document.createElement("img");
   newBookmarkIcon.classList.add("questioncard__bookmark-icon");
   newBookmarkIcon.setAttribute(
     "src",
@@ -43,21 +58,25 @@ form.addEventListener("submit", (event) => {
   );
   newBookmarkIcon.setAttribute("data-js", "bookmark-icon");
 
+  const newQuestion = document.createElement("h3");
   newQuestion.classList.add("questioncard__question");
-  newQuestion.textContent = data.question;
+  newQuestion.textContent = cardData.question;
 
+  const newAnswerButton = document.createElement("button");
   newAnswerButton.classList.add("questioncard__button-answer");
   newAnswerButton.textContent = "Show Answer";
   newAnswerButton.setAttribute("type", "button");
   newAnswerButton.setAttribute("data-js", "answer-button");
 
+  const newAnswer = document.createElement("p");
   newAnswer.classList.add("questioncard__answer");
-  newAnswer.textContent = data.answer;
+  newAnswer.textContent = cardData.answer;
   newAnswer.setAttribute("data-js", "answer");
 
+  const newTaglist = document.createElement("ul");
   newTaglist.classList.add("questioncard__tag-list");
 
-  const collectedNewTags = data.tag;
+  const collectedNewTags = cardData.tag;
   const newTags = collectedNewTags.split(/\s+/);
   newTags.forEach((newTag) => {
     const newTaglistItem = document.createElement("li");
@@ -76,53 +95,28 @@ form.addEventListener("submit", (event) => {
     newTaglist
   );
 
-  event.target.reset();
-  event.target.elements.question.focus();
-
-  formTextInputs.forEach((formTextinput, index) => {
-    counterOutputs[index].textContent = formTextinput.maxLength;
-  });
-
-  const createdAnswers = document.querySelectorAll('[data-js="answer"]');
-  const createdAnswerButtons = document.querySelectorAll(
-    '[data-js="answer-button"]'
-  );
-  const createdBookmarkButtons = document.querySelectorAll(
-    '[data-js="bookmark-button"]'
-  );
-  const createdBookmarkIcons = document.querySelectorAll(
-    '[data-js="bookmark-icon"]'
-  );
-
-  const createdAnswer = createdAnswers[createdAnswers.length - 1];
-  const createdAnswerButton =
-    createdAnswerButtons[createdAnswerButtons.length - 1];
-  const createdBookmarkButton =
-    createdBookmarkButtons[createdBookmarkButtons.length - 1];
-  const createdBookmarkIcon =
-    createdBookmarkIcons[createdBookmarkIcons.length - 1];
-
-  createdAnswerButton.addEventListener("click", () => {
+  newAnswerButton.addEventListener("click", () => {
     const buttonInitalText = "Show Answer";
-    if (createdAnswerButton.textContent.includes(buttonInitalText)) {
-      createdAnswerButton.textContent = "Hide Answer";
-      createdAnswer.style.display = "initial";
+    if (newAnswerButton.textContent.includes(buttonInitalText)) {
+      newAnswerButton.textContent = "Hide Answer";
+      newAnswer.style.display = "initial";
     } else {
-      createdAnswerButton.textContent = buttonInitalText;
-      createdAnswer.style.display = "none";
+      newAnswerButton.textContent = buttonInitalText;
+      newAnswer.style.display = "none";
     }
   });
 
-  createdBookmarkButton.addEventListener("click", () => {
-    createdBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
+  newBookmarkButton.addEventListener("click", () => {
+    newBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
   });
-  counterCreatedNewCards();
-});
-
-function counterCreatedNewCards() {
-  const createdNewCards = document.querySelectorAll(
-    '[data-js="question-card"]'
-  );
-  const counterCreatedNewCards = createdNewCards.length;
-  console.log(counterCreatedNewCards);
 }
+
+function loadCards() {
+  const cards = JSON.parse(localStorage.getItem("cards")) || [];
+
+  cards.forEach((cardData) => {
+    createCard(cardData);
+  });
+}
+
+loadCards();
