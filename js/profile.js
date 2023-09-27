@@ -12,9 +12,15 @@ buttonDarkmode.addEventListener("click", () => {
 });
 
 const cardsData = JSON.parse(localStorage.getItem("cards")) || [];
-const createdCardsCount = cardsData.length + 1;
-counterQuestions.textContent = createdCardsCount;
+if (cardsData !== null) {
+  counterQuestions.textContent = cardsData.length;
+} else {
+  counterQuestions.textContent = "0";
+}
 
 const bookmarksData = JSON.parse(localStorage.getItem("bookmarks"));
-const bookmarksCount = bookmarksData.length;
-counterBookmarks.textContent = bookmarksCount;
+if (bookmarksData !== null) {
+  counterBookmarks.textContent = bookmarksData.length;
+} else {
+  counterBookmarks.textContent = "0";
+}
