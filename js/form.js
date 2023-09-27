@@ -22,7 +22,6 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
 
   createCard(data);
-  countNewCards();
 
   const cardData = {
     question: data.question,
@@ -121,9 +120,3 @@ function loadCards() {
 }
 
 loadCards();
-
-function countNewCards() {
-  const cardsData = JSON.parse(localStorage.getItem("cards")) || [];
-  const createdCardsCount = cardsData.length + 1;
-  console.log(createdCardsCount);
-}
