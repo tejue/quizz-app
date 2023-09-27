@@ -14,9 +14,7 @@ buttonDarkmode.addEventListener("click", () => {
 const cardsData = JSON.parse(localStorage.getItem("cards")) || [];
 const createdCardsCount = cardsData.length + 1;
 counterQuestions.textContent = createdCardsCount;
-console.log(createdCardsCount);
 
 const bookmarksData = JSON.parse(localStorage.getItem("bookmarks"));
 const bookmarksCount = bookmarksData.length;
 counterBookmarks.textContent = bookmarksCount;
-console.log(bookmarksCount);

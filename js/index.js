@@ -26,8 +26,6 @@ function storeBookmarks() {
     }
   });
   localStorage.setItem("bookmarks", JSON.stringify(bookmarkData));
-  const countBookmarks = bookmarkData.length;
-  localStorage.setItem("counterBookmarks", countBookmarks);
 }
 
 function loadBookmarks() {
