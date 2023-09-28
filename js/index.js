@@ -3,6 +3,8 @@ const questioncards = document.querySelectorAll('[data-js="questioncard"]');
 const answerButtons = document.querySelectorAll('[data-js="answer-button"]');
 const answers = document.querySelectorAll('[data-js="answer"]');
 const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
+const question = document.querySelectorAll('[data-js="question"]');
+const tags = document.querySelectorAll('[data-js="tags"]');
 
 answerButtons.forEach((answerButton, index) => {
   answerButton?.addEventListener("click", () => {
