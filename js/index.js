@@ -25,6 +25,7 @@ function storeBookmarks() {
     }
   });
   localStorage.setItem("bookmarks", JSON.stringify(bookmarkData));
+  cloneCards();
 }
 
 function loadBookmarks() {
@@ -32,13 +33,13 @@ function loadBookmarks() {
   bookmarkData.forEach((index) => {
     bookmarkIcons[index].classList.add("questioncard__bookmark-icon-active");
   });
+  cloneCards();
 }
 
 bookmarkIcons.forEach((bookmarkIcon, index) => {
   bookmarkIcon.addEventListener("click", () => {
     bookmarkIcons[index].classList.toggle("questioncard__bookmark-icon-active");
     storeBookmarks();
-    cloneCards();
   });
 });
 
