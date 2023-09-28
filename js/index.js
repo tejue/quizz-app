@@ -1,9 +1,10 @@
+const main = document.querySelector('[data-js="main"]');
+const questioncards = document.querySelectorAll('[data-js="questioncard"]');
 const answerButtons = document.querySelectorAll('[data-js="answer-button"]');
 const answers = document.querySelectorAll('[data-js="answer"]');
-const bookmarkButtons = document.querySelectorAll(
-  '[data-js="bookmark-button"]'
-);
 const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
+const question = document.querySelectorAll('[data-js="question"]');
+const tags = document.querySelectorAll('[data-js="tags"]');
 
 answerButtons.forEach((answerButton, index) => {
   answerButton?.addEventListener("click", () => {
@@ -26,6 +27,7 @@ function storeBookmarks() {
     }
   });
   localStorage.setItem("bookmarks", JSON.stringify(bookmarkData));
+  cloneCards();
 }
 
 function loadBookmarks() {
@@ -33,13 +35,32 @@ function loadBookmarks() {
   bookmarkData.forEach((index) => {
     bookmarkIcons[index].classList.add("questioncard__bookmark-icon-active");
   });
+  cloneCards();
 }
 
-bookmarkButtons.forEach((bookmarkButton, index) => {
-  bookmarkButton.addEventListener("click", () => {
+bookmarkIcons.forEach((bookmarkIcon, index) => {
+  bookmarkIcon.addEventListener("click", () => {
     bookmarkIcons[index].classList.toggle("questioncard__bookmark-icon-active");
     storeBookmarks();
   });
 });
 
 loadBookmarks();
+
+function cloneCards() {
+  const clonedCards = main.querySelectorAll('[data-js="clone"]');
+  clonedCards.forEach((clonedCard) => {
+    clonedCard.remove();
+  });
+  questioncards.forEach((questioncard, index) => {
+    if (
+      bookmarkIcons[index].classList.contains(
+        "questioncard__bookmark-icon-active"
+      )
+    ) {
+      const clone = questioncard.cloneNode(true);
+      clone.setAttribute("data-js", "clone");
+      main.append(clone);
+    }
+  });
+}
