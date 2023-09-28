@@ -1,3 +1,5 @@
+const main = document.querySelector('[data-js="main"]');
+const questioncards = document.querySelectorAll('[data-js="questioncard"]');
 const answerButtons = document.querySelectorAll('[data-js="answer-button"]');
 const answers = document.querySelectorAll('[data-js="answer"]');
 const bookmarkIcons = document.querySelectorAll('[data-js="bookmark-icon"]');
@@ -36,25 +38,25 @@ bookmarkIcons.forEach((bookmarkIcon, index) => {
   bookmarkIcon.addEventListener("click", () => {
     bookmarkIcons[index].classList.toggle("questioncard__bookmark-icon-active");
     storeBookmarks();
-    clony();
+    cloneCards();
   });
 });
 
 loadBookmarks();
 
-const cards = document.querySelector('[data-js="questioncard"]');
-const booked = document.querySelectorAll('[data-js="bookmark-icon"]');
-const main = document.querySelector('[data-js="main"]');
-
-function clony() {
-  const existingClones = main.querySelectorAll('[data-js="clon"]');
-  existingClones.forEach((existingClone) => {
-    existingClone.remove();
+function cloneCards() {
+  const clonedCards = main.querySelectorAll('[data-js="clone"]');
+  clonedCards.forEach((clonedCard) => {
+    clonedCard.remove();
   });
-  booked.forEach((book) => {
-    if (book.classList.contains("questioncard__bookmark-icon-active")) {
-      const clone = cards.cloneNode(true);
-      clone.setAttribute("data-js", "clon");
+  questioncards.forEach((questioncard, index) => {
+    if (
+      bookmarkIcons[index].classList.contains(
+        "questioncard__bookmark-icon-active"
+      )
+    ) {
+      const clone = questioncard.cloneNode(true);
+      clone.setAttribute("data-js", "clone");
       main.append(clone);
     }
   });
