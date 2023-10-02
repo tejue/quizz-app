@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
     question: data.question,
     answer: data.answer,
     tag: data.tag,
-    id: cards.length,
+    id: new Date().getTime(),
   };
 
   cards.push(cardData);
@@ -45,11 +45,6 @@ function createCard(cardData) {
   const newQuestioncard = document.createElement("li");
   newQuestioncard.classList.add("questioncard__box");
   newQuestioncard.setAttribute("data-js", "question-card");
-
-  const newBookmarkButton = document.createElement("button");
-  newBookmarkButton.classList.add("questioncard__bookmark-icon-button");
-  newBookmarkButton.setAttribute("type", "button");
-  newBookmarkButton.setAttribute("data-js", "bookmark-button");
 
   const newBookmarkIcon = document.createElement("img");
   newBookmarkIcon.classList.add("questioncard__bookmark-icon");
@@ -93,9 +88,8 @@ function createCard(cardData) {
   });
 
   main.append(newQuestioncard);
-  newBookmarkButton.append(newBookmarkIcon);
   newQuestioncard.append(
-    newBookmarkButton,
+    newBookmarkIcon,
     newQuestion,
     newAnswerButton,
     newAnswer,
@@ -114,7 +108,7 @@ function createCard(cardData) {
     }
   });
 
-  newBookmarkButton.addEventListener("click", () => {
+  newBookmarkIcon.addEventListener("click", () => {
     newBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
   });
 
