@@ -21,15 +21,15 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  createCard(data);
+  const cards = JSON.parse(localStorage.getItem("cards") || "[]");
 
   const cardData = {
     question: data.question,
     answer: data.answer,
     tag: data.tag,
+    id: cards.length,
   };
 
-  const cards = JSON.parse(localStorage.getItem("cards")) || [];
   cards.push(cardData);
   localStorage.setItem("cards", JSON.stringify(cards));
 
@@ -38,10 +38,11 @@ form.addEventListener("submit", (event) => {
   });
   event.target.reset();
   event.target.elements.question.focus();
+  createCard(cardData);
 });
 
 function createCard(cardData) {
-  const newQuestioncard = document.createElement("section");
+  const newQuestioncard = document.createElement("li");
   newQuestioncard.classList.add("questioncard__box");
   newQuestioncard.setAttribute("data-js", "question-card");
 
@@ -57,6 +58,12 @@ function createCard(cardData) {
     "./assets/images/bookmark-dark-filled-excali.svg"
   );
   newBookmarkIcon.setAttribute("data-js", "bookmark-icon");
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("questioncard__button-delete");
+  deleteButton.textContent = "Delete Card";
+  deleteButton.setAttribute("type", "button");
+  deleteButton.setAttribute("data-js", "button-deleteCard");
 
   const newQuestion = document.createElement("h3");
   newQuestion.classList.add("questioncard__question");
@@ -92,7 +99,8 @@ function createCard(cardData) {
     newQuestion,
     newAnswerButton,
     newAnswer,
-    newTaglist
+    newTaglist,
+    deleteButton
   );
 
   newAnswerButton.addEventListener("click", () => {
@@ -108,6 +116,14 @@ function createCard(cardData) {
 
   newBookmarkButton.addEventListener("click", () => {
     newBookmarkIcon.classList.toggle("questioncard__bookmark-icon-active");
+  });
+
+  deleteButton.addEventListener("click", () => {
+    const cardId = cardData.id;
+    const cards = JSON.parse(localStorage.getItem("cards")) || [];
+    const updatedCards = cards.filter((card) => card.id !== cardId);
+    localStorage.setItem("cards", JSON.stringify(updatedCards));
+    newQuestioncard.remove();
   });
 }
 
